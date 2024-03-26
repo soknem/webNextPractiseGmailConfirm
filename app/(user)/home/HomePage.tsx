@@ -1,6 +1,6 @@
 import React from "react";
 import SliderComponent from "./components/SliderComponent";
-import CardCourseComponent from "@/components/CardCourseComponent";
+import CardCourseComponent from "@/components/card/CardCourseComponent";
 export default function HomePage() {
   const courseComponents = Array.from({ length: 8 }, (_, index) => (
     <CardCourseComponent key={index} />

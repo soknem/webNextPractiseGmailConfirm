@@ -2,7 +2,7 @@
 
 import { Footer } from "flowbite-react";
 import type { CustomFlowbiteTheme } from "flowbite-react";
-import { customTheme } from "./CustomFlowbiteThemeComponent";
+import { customTheme } from "../customize/CustomFlowbiteThemeComponent";
 import {
   BsDribbble,
   BsFacebook,
@@ -62,15 +62,21 @@ function FooterComponent() {
                 style={{
                   backgroundImage: "url('/slide1.jpg')",
                   backgroundSize: "cover",
-                  width: "full", 
-                  height: "auto", 
+                  width: "full",
+                  height: "auto",
                   margin: "0 auto",
                 }}
               >
                 <div className="grid grid-cols-1 justify-center items-center">
-                  <img src="./istad logo.png" alt="" className="w-[50px] mx-auto" />
+                  <img
+                    src="./istad logo.png"
+                    alt=""
+                    className="w-[50px] mx-auto"
+                  />
                   <div className="text-white mx-auto">
-                    <h3 className="font-semibold text-[1.2rem]">Center Of Science</h3> 
+                    <h3 className="font-semibold text-[1.2rem]">
+                      Center Of Science
+                    </h3>
                     <h3 className="text-[0.7rem]">9.9 ពាន់អ្នកតាមដាន</h3>
                   </div>
                 </div>

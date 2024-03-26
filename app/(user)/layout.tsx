@@ -1,6 +1,6 @@
-import "./globals.css";
+import "@/globals.css";
 import NavbarComponent from "@/components/Menu/NavbarComponent";
-import FooterComponent from "@/components/FooterComponent";
+import FooterComponent from "@/components/footer/FooterComponent";
 export default function RootLayout({
   children,
 }: Readonly<{

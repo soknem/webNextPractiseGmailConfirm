@@ -1,4 +1,4 @@
-import CardCourseComponent from "@/components/CardCourseComponent";
+import CardCourseComponent from "@/components/card/CardCourseComponent";
 import React from "react";
 
 export default function course() {

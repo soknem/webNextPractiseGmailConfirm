@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { customTheme } from "../CustomFlowbiteThemeComponent";
+import { customTheme } from "../customize/CustomFlowbiteThemeComponent";
 import {
   Navbar,
   NavbarBrand,
@@ -9,7 +9,7 @@ import {
   NavbarToggle,
 } from "flowbite-react";
 import { usePathname } from "next/navigation";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { MenuList } from "./MenuList";
 type menuType = {
   name: string;
@@ -49,13 +49,16 @@ function NavbarComponent() {
       </NavbarBrand>
       <NavbarToggle />
       <NavbarCollapse>
-        {menu.map((item,index)=>(
-          
-            <NavbarLink onClick={()=>updateMenuList(item.path)}  as={Link} href={item.path} active={item.active}>
+        {menu.map((item, index) => (
+          <NavbarLink
+            onClick={() => updateMenuList(item.path)}
+            as={Link}
+            href={item.path}
+            active={item.active}
+          >
             {item.name}
           </NavbarLink>
-        )
-        )}
+        ))}
       </NavbarCollapse>
     </Navbar>
   );

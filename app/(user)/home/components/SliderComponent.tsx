@@ -1,7 +1,7 @@
 "use client";
 
 import { Carousel } from "flowbite-react";
-import { customTheme } from "@/components/CustomFlowbiteThemeComponent";
+import { customTheme } from "@/components/customize/CustomFlowbiteThemeComponent";
 import { useRouter } from "next/navigation";
 import { MenuList } from "@/components/Menu/MenuList";
 import { useState } from "react";
@@ -15,8 +15,10 @@ function SliderComponent() {
   const [menu, setMenu] = useState<menuType[]>(MenuList);
   const handleEnrollButtonClick = () => {
     router.push("/enroll");
-    const updatedMenu = menu.map(item =>
-      item.path === "/enroll" ? { ...item, active: true } : { ...item, active: false }
+    const updatedMenu = menu.map((item) =>
+      item.path === "/enroll"
+        ? { ...item, active: true }
+        : { ...item, active: false }
     );
     setMenu(updatedMenu);
     console.log(updatedMenu);
@@ -43,7 +45,9 @@ function SliderComponent() {
                 graduates have been guaranteed excellent job opportunities with
                 the Top IT company. Enroll Now
               </p>
-              <button type="button" onClick={handleEnrollButtonClick}
+              <button
+                type="button"
+                onClick={handleEnrollButtonClick}
                 className="w-[150px] bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-6 md:mt-10"
               >
                 Enroll Now
@@ -63,7 +67,9 @@ function SliderComponent() {
             <div className="w-100 h-full flex flex-col justify-center ml-5 sm:ml-10 md:ml-20 xl:ml-30 2xl:ml-40">
               <h2 className="mb-5 text-2xl md:text-5xl font-bold">Vision</h2>
               <p className="mb-5 max-w-md">Advanced IT Center in Cambodia</p>
-              <button type="button" onClick={handleEnrollButtonClick}
+              <button
+                type="button"
+                onClick={handleEnrollButtonClick}
                 className="w-[150px] bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-6 md:mt-10"
               >
                 Enroll Now
@@ -87,7 +93,9 @@ function SliderComponent() {
                 mentoring Build up the capacity and career of IT experts
                 Cambodia Consult and connect CSTAD trainees to top IT careers
               </p>
-              <button type="button" onClick={handleEnrollButtonClick}
+              <button
+                type="button"
+                onClick={handleEnrollButtonClick}
                 className="w-[150px] bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-6 md:mt-10"
               >
                 Enroll Now

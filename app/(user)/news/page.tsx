@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import CardContentComponent from "@/components/CardContentComponent";
-import Pagination from "@/components/PaginationComponent"; // Import the Pagination component
+import CardContentComponent from "@/components/card/CardContentComponent";
+import Pagination from "@/components/pagination/PaginationComponent"; // Import the Pagination component
 import React from "react";
 
 export default function News() {
