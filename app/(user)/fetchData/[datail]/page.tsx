@@ -7,7 +7,7 @@ type PropsType = {
   };
 
   const ENDPOINT ='https://fakestoreapi.com/products/';
-  const fetApi=async(id)=>{
+  const fetApi=async(id:number)=>{
     const res=await fetch(`${ENDPOINT}${id}`);
     const data=await res.json();
     return data;

@@ -1,39 +1,21 @@
-import {ConfirmIcon } from "@/components/icons/FontAwesome"
-
-type PropsParam = {
-  params: {
-    key: string;
-  };
-  searchParams: any;
+type Props = {
+  params: { key: string };
+  searchParam: any;
 };
-
 import style from "./style.module.css";
 import Button from "./components/Button";
-
-
-export default function ConfirmEmail(props: PropsParam) {
-  
+import { ConfirmIcon } from "@/components/icons/FontAwesome";
+export default function page(props: Props) {
   return (
-    <main >
-
-      <section className={style.container}>
-            
-            <ConfirmIcon color="#080" classname="h-32 w-32 mb-8"/>
-           
-            <h1 className="text-5xl my-4 font-semibold">Email has been Confirmed!</h1>
-           
-            <p className="text-2xl my-2">
-          Your email has been verified! you can go to login page by press below button! 
-          </p>
-          <p className="text-2xl">
-          អ៊ីម៉ែលរបស់អ្នកបានផ្ទៀងផ្ទាត់ជោគជ័យ! សូមចុចប៉ូតុងខាងក្រោមដើម្បីចូលទៅកម្មវិធី 
-          </p>
-          <div className="flex gap-4" >
-            <Button title="Confirm" classname="my-8"/>
-          </div>
-          
-
-        </section>  
+    <main className={style.container}>
+      <section className="flex flex-col items-center">
+        <ConfirmIcon color="#080" classname="h-44 w-44 mb-8" />
+        <h1 className="text-6xl my-4">Email has been Confirmed!</h1>
+        <p className="text-3xl">
+          Your email comfirmed! you can go to login page by press below button!
+        </p>
+        <Button title="Login" classname="my-8" />
+      </section>
     </main>
-  )
+  );
 }
